@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Nation</title>
+    <link rel="stylesheet" href="./style/bootstrap.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" href="./img/index.jpg" />
+  </head>
+  <body>
+    <!--Nav bar-->
+
+    <nav class="nav nav-justified fixed-top bg-dark">
+      <a class="nav-link" href="./index.html">
+        <img src="./img/index.jpg" />
+        <span> Game Nation</span>
+      </a>
+
+      <a class="nav-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="lightgreen"
+          class="bi bi-person-fill-add"
+          viewBox="0 0 16 16"
+          data-bs-toggle="modal"
+          data-bs-target="#signin"
+        >
+          <path
+            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+          <path
+            d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"
+          />
+        </svg>
+      </a>
+
+      <a class="nav-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="lightgreen"
+          class="bi bi-person-fill-check"
+          viewBox="0 0 16 16"
+          data-bs-toggle="modal"
+          data-bs-target="#login"
+        >
+          <path
+            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+          <path
+            d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"
+          />
+        </svg>
+      </a>
+    </nav>
+
+    <!--Card img-->
+
+    <div class="card">
+      <a href="./index.html">
+        <img src="./img/header.png" class="card-img-top" alt="card-img-top" />
+      </a>
+      <div class="card-body">
+        <button
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".multi-collapse"
+          aria-expanded="false"
+          aria-controls="multiCollapse1 multiCollapse2"
+        >
+          <a href="#" data-bs-toggle="modal" data-bs-target="#games">Games</a>
+        </button>
+      </div>
+    </div>
+
+    <!--Modal Log in-->
+
+    <form id="loginForm">
+      <div
+        class="modal fade"
+        id="login"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="staticBackdropLabel">Log in</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control loginUsername"
+                  id="loginUsername"
+                  placeholder="Username"
+                  name="loginUsername"
+                  required
+                />
+                <label for="loginUsername">Username</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control loginPassword"
+                  id="loginPassword"
+                  placeholder="Contraseña"
+                  name="loginPassword"
+                  required
+                />
+                <label for="loginPassword">Password</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="button1">
+                Log in
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!--Modal signn in-->
+
+    <form id="signinForm">
+      <div
+        class="modal fade"
+        id="signin"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="staticBackdropLabel">Sign in</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control signinUsername"
+                  id="signinUsername"
+                  placeholder="Nombre de usuario"
+                  required
+                />
+                <label for="signinusername">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control signinEmail"
+                  id="email"
+                  placeholder="Correo electrónico"
+                  required
+                />
+                <label for="email">E-mail</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control signinPassword"
+                  id="signinPassword"
+                  placeholder="Contraseña"
+                  required
+                />
+                <label for="signinpassword">Password</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="button2">
+                Sign in
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!--Modal Games-->
+
+    <div class="modal" tabindex="-1" id="games">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modalSizeLabel">Games</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="./img/call of duty.png"
+                    class="card-img-top"
+                    alt="Call Of Duty"
+                  />
+                  <div class="card-body">
+                    <h2 class="card-title">Call Of Duty</h2>
+                    <p class="card-text">
+                      Se centra en representar situaciones de combate y guerra
+                      desde perspectivas históricas o contemporáneas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="./img/fortnite.jpg"
+                    class="card-img-top"
+                    alt="Fortnite"
+                  />
+                  <div class="card-body">
+                    <h2 class="card-title">Fortnite</h2>
+                    <p class="card-text">
+                      Se centra principalmente en la supervivencia en un mundo
+                      postapocalíptico.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="./img/league.jpg"
+                    class="card-img-top"
+                    alt="League Of Legends"
+                  />
+                  <div class="card-body">
+                    <h2 class="card-title">League Of Legends</h2>
+                    <p class="card-text">
+                      Gira en torno a la competencia estratégica entre dos
+                      equipos de jugadores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="./img/minecraft.png"
+                    class="card-img-top"
+                    alt="Minecraft"
+                  />
+                  <div class="card-body">
+                    <h2 class="card-title">Minecraft</h2>
+                    <p class="card-text">
+                      Se desarrolla en un vasto mundo tridimensional compuesto
+                      por bosques, montañas, desiertos, océanos, cuevas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer class="fixed-bottom">
+      <p>© 2023 Game Nation</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
